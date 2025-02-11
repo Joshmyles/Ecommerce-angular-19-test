@@ -6,7 +6,9 @@ import { Component, input, output } from '@angular/core';
   template: `
   <button 
     (click)="handleClick()" 
-    class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 shadow-md">
+    class="text-white px-4 py-2 rounded shadow-md hover:cursor-pointer"
+    [class]="(label() !== 'Remove') ? 'bg-blue-500 hover:bg-blue-600' : 'bg-red-500 hover:bg-red-600'"
+    >
       {{label()}}
   </button>
   `,
